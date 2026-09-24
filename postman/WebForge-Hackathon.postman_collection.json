@@ -1,0 +1,343 @@
+{
+  "info": {
+    "_postman_id": "b779115b-c8d1-4814-aaca-f9ca984ed230",
+    "name": "WebForge Hackathon",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56822912",
+    "_collection_link": "https://go.postman.co/collection/56822912-b779115b-c8d1-4814-aaca-f9ca984ed230?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Admin - View all Registrations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/registration-api/all-registrations",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "registration-api",
+                "all-registrations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin - Update registration status",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"CANCELLED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/registration-api/registrations/6ab4c27550850225e32fe393/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "registration-api",
+                "registrations",
+                "6ab4c27550850225e32fe393",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin - Update Event",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Advanced Web Development Workshop for IOT\",\r\n    \"description\": \"A hands-on workshop covering modern web development\",\r\n    \"date\": \"2026-09-30T10:00:00\",\r\n    \"venue\": \"E-Block Seminar Hall\",\r\n    \"capacity\": 120,\r\n    \"status\": \"PUBLISHED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/event-api/events/6ab4c09e90b68534bb8d147e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "event-api",
+                "events",
+                "6ab4c09e90b68534bb8d147e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin - Cancel Event",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/event-api/events/6ab4c09e90b68534bb8d147e/cancel",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "event-api",
+                "events",
+                "6ab4c09e90b68534bb8d147e",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin - Publish Event",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/event-api/events/6ab4c09e90b68534bb8d147e/publish",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "event-api",
+                "events",
+                "6ab4c09e90b68534bb8d147e",
+                "publish"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin - View All Events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/event-api/admin/events",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "event-api",
+                "admin",
+                "events"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin - Create Event",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Web Development Workshop\",\r\n    \"description\": \"A hands-on workshop on modern web development\",\r\n    \"date\": \"2026-09-30T10:00:00\",\r\n    \"venue\": \"E-Block Seminar Hall\",\r\n    \"capacity\": 100,\r\n    \"status\": \"PUBLISHED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/event-api/events",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "event-api",
+                "events"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Common to both",
+      "item": [
+        {
+          "name": "View Events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/event-api/events",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "event-api",
+                "events"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"Admin@1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/user-api/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "user-api",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "User Registeration",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Validation Test\",\r\n    \"email\": \"validationtest@example.com\",\r\n    \"password\": \"te\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/user-api/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "user-api",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Event Registeration",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/registration-api/events/6ab4c09e90b68534bb8d147e/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "registration-api",
+                "events",
+                "6ab4c09e90b68534bb8d147e",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Registered Events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/registration-api/my-registrations",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "registration-api",
+                "my-registrations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User - Cancel Event Registration",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/registration-api/events/6ab4c09e90b68534bb8d147e/cancel",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "registration-api",
+                "events",
+                "6ab4c09e90b68534bb8d147e",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
