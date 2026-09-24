@@ -20,6 +20,7 @@ registrationApp.post("/events/:eventId/register", verifyToken, allowedRoles("USE
 
         let eventId = req.params.eventId
         let userId = req.user.id
+        let {teamName} = req.body
 
         // Check whether event exists
 
@@ -74,7 +75,8 @@ registrationApp.post("/events/:eventId/register", verifyToken, allowedRoles("USE
 
         let newRegistration = await RegistrationModel.create({
             userId:userId,
-            eventId:eventId
+            eventId:eventId,
+            teamName:teamName
         })
 
         res.status(201).json({

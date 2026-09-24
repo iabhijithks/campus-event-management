@@ -15,6 +15,13 @@ const registrationSchema = new Schema({
         required:[true, "Event ID is required"]
     },
 
+    teamName:{
+        type:String,
+        required:[true, "Team name is required"],
+        trim:true,
+        minLength:[2, "Team name must be at least 2 characters"]
+    },
+
     status:{
         type:String,
         enum:{
